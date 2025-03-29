@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   return (
-    <header className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+    <header className="bg-[var(--color-soft)] border-gray-200 dark:border-gray-600 dark:bg-gray-900">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <Link href="/">
           <Image
