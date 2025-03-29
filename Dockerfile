@@ -1,14 +1,22 @@
-# Use node image as base image
 FROM node:22.13.1-alpine
-# Set working directory
-WORKDIR /app
-# Copy package.json and package-lock.json
-COPY package*.json ./
-RUN npm install
-# Copy all files
-COPY . .
-# Expose port 3000
-EXPOSE 3000
-# Start the application
-CMD ["npm", "run", "start"]
 
+WORKDIR /app
+
+# Instalar pnpm
+RUN npm install -g pnpm
+
+# Copiar archivos de package
+COPY package*.json pnpm-lock.yaml ./
+
+# Instalar dependencias
+RUN pnpm install --frozen-lockfile
+
+# Copiar el resto de archivos
+COPY . .
+
+# Construir la aplicación
+RUN pnpm run build
+
+EXPOSE 3000
+
+CMD ["pnpm", "start"]
