@@ -5,6 +5,7 @@ export default function Footer() {
   return (
     <footer className="p-4 bg-[var(--color-soft)] md:p-8 lg:p-10 dark:bg-gray-800">
       <div className="mx-auto max-w-screen-xl gap-2 text-center flex flex-col">
+        {/* TODO: Agregar Logo de tienda */}
         <span className="flex justify-center items-center text-2xl font-semibold text-[var(--color-secondary)]] dark:text-white">
           Tat Pet Boutique & Coffee
         </span>
@@ -47,7 +48,7 @@ export default function Footer() {
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           Copyright © 2025{' '}
           <a href="#" className="hover:underline">
-            Tatpet Boutique
+            Tatpet Boutique (Terminos y condiciones)
           </a>
           . Todos los derechos reservados
         </span>

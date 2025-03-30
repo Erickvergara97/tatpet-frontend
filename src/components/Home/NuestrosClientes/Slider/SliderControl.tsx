@@ -18,7 +18,9 @@ export default function SliderControl({
           key={index}
           type="button"
           className={`w-3 h-3 rounded-full ${
-            index === currentIndex ? 'bg-gray-900' : 'bg-gray-400'
+            index === currentIndex
+              ? 'bg-[var(--color-secondary)] dark:bg-gray-600'
+              : 'bg-gray-400'
           }`}
           aria-current={index === currentIndex ? 'true' : 'false'}
           aria-label={`Slide ${index + 1}`}
