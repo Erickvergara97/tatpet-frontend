@@ -1,18 +1,13 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Fredoka } from 'next/font/google';
 import '../styles/globals.css';
 import Footer from '@/components/Footer';
 import { ThemeModeScript } from 'flowbite-react';
 import Navbar from '@/components/Navbar/Navbar';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const fredoka = Fredoka({
   subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  weight: ['400', '700'],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +26,7 @@ export default function RootLayout({
         <ThemeModeScript />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${fredoka.className} antialiased flex flex-col min-h-screen`}
       >
         <Navbar />
         {children}
