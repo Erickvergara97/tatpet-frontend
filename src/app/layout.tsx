@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { Fredoka } from 'next/font/google';
 import '../styles/globals.css';
 import Footer from '@/components/Footer';
@@ -10,7 +9,7 @@ const fredoka = Fredoka({
   weight: ['400', '700'],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Tatpet Boutique',
   description: 'Page for Tatpet Boutique',
 };
