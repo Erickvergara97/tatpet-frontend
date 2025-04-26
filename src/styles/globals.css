@@ -14,9 +14,7 @@
   --color-neutral: #d6daea;
   --color-soft: #8dd1e3;
   --color-bg: #9ad0eb;
-}
 
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
